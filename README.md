@@ -35,15 +35,15 @@ install.packages(c("readxl", "lavaan", "semPlot", "psych", "haven"))
 ### SPSS syntax
 1. Open `pisa2018_analysis.sps` in SPSS.
 2. Replace the `<PROJECT_DIR>` placeholder with the folder containing your PISA `.sav` file, and `<MACRO_DIR>` with your local IDB Analyzer macros folder (default: `C:\Users\<your-username>\AppData\Roaming\IEA\IDBAnalyzerV5\bin\Data\Templates\SPSS_Macros`).
-3. Run section B.1 first to compute the composite indices, then run the remaining sections as needed — each IDB Analyzer block is self-contained (select the `JB_*` block and press Ctrl+A then Ctrl+R, per the IDB Analyzer convention).
+3. Run section B.1 first to compute the composite indices, then run the remaining sections as needed  each IDB Analyzer block is self-contained (select the `JB_*` block and press Ctrl+A then Ctrl+R, per the IDB Analyzer convention).
 
 ### R script
 1. Open `cfa_analysis.R`.
 2. Set `PROJECT_DIR` to your local folder containing `PISA2018 - Copy.sav` (a version of the dataset with the recoded items from B.1 already saved).
-3. Run top to bottom. Note the flagged possible typo before the second `semPaths()` call — verify the model object name before running that section.
+3. Run top to bottom. Note the flagged possible typo before the second `semPaths()` call and verify the model object name before running that section.
 
 ## Notes
 
-- Encoding varies by section (UTF-8 vs. windows-1252) per the original SPSS export — kept as-is per section.
+- Encoding varies by section (UTF-8 vs. windows-1252) per the original SPSS export  kept as-is per section.
 - All weighting uses the PISA final student weight (`W_FSTUWT`) and BRR replicate weights (`W_FSTURWT`), per standard PISA analytical guidelines.
 
